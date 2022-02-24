@@ -1,0 +1,41 @@
+<div class="grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12 text-center">
+          <i (click)="redirecionarProdutos()" class="pi pi-chevron-left" style="color: #007ad9; float: left; cursor:pointer;"></i>
+          <h2>Dados cadastrais</h2>
+          <p id="msgErro"></p>
+        </div>
+        <div class="col-12">
+          <label for="idProduto">ID:</label>
+          <input id="idProduto" class="col-12" type="text" [value]="produto.id" pInputText disabled />
+        </div>
+        <div class="col-12" >
+          <label for="nome">Nome:</label>
+          <input id="nome" class="col-12" type="text" [value]="produto.nome" pInputText />
+        </div>
+        <div class="col-12" >
+          <label for="descricao">Nome:</label>
+          <input id="descricao" class="col-12" type="text" [value]="produto.descricao" pInputText />
+        </div>
+        <div class="col-12" >
+          <label for="valor">Nome:</label>
+          <input id="valor" class="col-12" type="text" [value]="produto.valor" pInputText />
+        </div>
+
+
+        <div class="col-12">
+          <button
+            pButton
+            type="button"
+            label="Salvar"
+            class="col-12 p-button-success"
+            (click)="atualizarProduto()"
+          ></button>
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>

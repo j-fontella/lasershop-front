@@ -1,0 +1,52 @@
+<div class="grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12 text-center">
+          <i (click)="redirecionarGeral()" class="pi pi-chevron-left" style="color: #007ad9; float: left; cursor:pointer;"></i>
+          <h1>Produtos cadastrados</h1>
+          <button
+            pButton
+            type="button"
+            label="Cadastrar produto"
+            class="col-12 p-button-success"
+            id="btnCadastrar"
+            (click)="redirecionarCadastro()"
+          ></button>
+        </div>
+        <div class="col-12">
+          <p-orderList [value]="listaProdutos">
+            <ng-template let-produto pTemplate="item">
+              <div>
+                <div (click)="redirecionarProduto(produto)">[{{produto.id}}] {{produto.nome}}</div>
+              </div>
+            </ng-template>
+          </p-orderList>
+        </div>
+
+        <div class="col-12">
+          <label for="idPesquisa">Pesquisar por id:</label>
+          <input id="idPesquisa" class="col-12 mb-2" type="text" pInputText />
+          <button
+            pButton
+            type="button"
+            label="Pesquisar"
+            class="col-12 p-button-success"
+            (click)="pesquisarPorId()"></button>
+        </div>
+
+        <div class="col-12">
+          <label for="nomePesquisa">Pesquisar por nome:</label>
+          <input id="nomePesquisa" class="col-12 mb-2" type="text" pInputText />
+          <button
+            pButton
+            type="button"
+            label="Pesquisar"
+            class="col-12 p-button-success"
+            (click)="pesquisarPorNome()"></button>
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>

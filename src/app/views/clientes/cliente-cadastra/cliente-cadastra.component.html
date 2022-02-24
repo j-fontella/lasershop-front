@@ -1,0 +1,64 @@
+<div class="grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12 text-center">
+          <i (click)="redirecionarclientes()" class="pi pi-chevron-left" style="color: #007ad9; float: left; cursor:pointer;"></i>
+          <h2>Cadastrar novo cliente</h2>
+          <p id="msgErro"></p>
+        </div>
+        <div class="col-12" id="nomeRegistro">
+          <label for="nome">Nome:</label>
+          <input id="nome" class="col-12" type="text" pInputText />
+        </div>
+        <div class="col-12">
+          <label for="limiteCredito">Limite de crédito:</label>
+          <input id="limiteCredito" class="col-12" type="text" pInputText />
+        </div>
+        <div class="col-12">
+          <label for="limiteParcelas">Limite de parcelas:</label>
+          <input id="limiteParcelas" class="col-12" type="text" pInputText />
+        </div>
+        <div class="col-12">
+          <label for="cep">CEP:</label>
+          <input id="cep" class="col-12" (change)="getEndereco()" type="text" pInputText />
+        </div>
+        <div class="col-6">
+          <label for="logradouro">Logradouro:</label>
+          <input id="logradouro" class="col-12" type="text" pInputText disabled />
+        </div>
+        <div class="col-6">
+          <label for="numero">Numero:</label>
+          <input id="numero" class="col-12" type="text" pInputText  />
+        </div>
+        <div class="col-6">
+          <label for="complemento">Complemento:</label>
+          <input id="complemento" class="col-12" type="text" pInputText  />
+        </div>
+        <div class="col-6">
+          <label for="bairro">Bairro:</label>
+          <input id="bairro" class="col-12" type="text" pInputText disabled  />
+        </div>
+        <div class="col-6">
+          <label for="cidade">Cidade:</label>
+          <input id="cidade" class="col-12" type="text" pInputText disabled  />
+        </div>
+        <div class="col-6">
+          <label for="uf">UF:</label>
+          <input id="uf" class="col-12" type="text" pInputText disabled />
+        </div>
+        <div class="col-12">
+          <button
+            pButton
+            type="button"
+            label="Salvar"
+            class="col-12 p-button-success"
+            id="botaoLogin"
+            (click)="cadastrarCliente()"
+          ></button>
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>

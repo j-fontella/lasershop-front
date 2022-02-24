@@ -1,0 +1,41 @@
+<div class="grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12 text-center">
+          <i class="fas fa-car fa-4x" style="color: #009141;"></i>
+          <img src="assets/images/logo.png" class="mb-5">
+
+          <button
+            pButton
+            type="button"
+            label="Clientes"
+            class="col-12 p-button-success m-1"
+            style="background: #009141"
+            (click)="redirecionarClientes()"></button>
+
+          <button
+            pButton
+            type="button"
+            label="Produtos"
+            class="col-12 p-button-success m-1"
+            style="background: #009141"
+            (click)="redirecionarProdutos()"
+            id="btnGerar"
+          ></button>
+
+          <button
+            pButton
+            type="button"
+            label="Pedidos"
+            class="col-12 p-button-success m-1"
+            style="background: #009141"
+            (click)="redirecionarPedidos()"
+          ></button>
+
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<div class="grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12 text-center">
+          <i (click)="redirecionarPedidos()" class="pi pi-chevron-left" style="color: #007ad9; float: left; cursor:pointer;"></i>
+          <h1>Cadastrar novo pedido</h1>
+          <p id="msgErro"></p>
+          <button
+            pButton
+            type="button"
+            label="Finalizar pedido"
+            class="col-12 p-button-success"
+            id="btnCadastrar"
+            (click)="finalizarPedido()"
+          ></button>
+        </div>
+        <div class="col-12">
+          <div class="col-12">
+            <label for="parcelas">Quantidade parcelas:</label>
+            <input id="parcelas" class="col-12" min="1" value="1" type="number" pInputText />
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="col-12">
+            <label for="cliente">Cliente:</label>
+            <select id="cliente" class="col-12">
+            </select>
+          </div>
+        </div>
+
+
+
+        <div class="col-12">
+          <div class="col-12">
+            <h2>Carrinho</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Valor</th>
+                  <th>Remover</th>
+                </tr>
+              </thead>
+              <tbody id="produtoTabela">
+
+              </tbody>
+            </table>
+            <p>Total da compra R$<span id="totalCompra">0,00</span></p>
+
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="col-12">
+            <label for="produtos">Produtos:</label>
+            <select id="produtos" class="col-12 mb-2">
+            </select>
+            <button
+              pButton
+              type="button"
+              label="Adicionar ao carrinho"
+              (click)="adicionarCarrinho()"
+              class="col-12 p-button-success"
+            ></button>
+          </div>
+        </div>
+
+
+
+      </div>
+    </p-card>
+  </div>
+</div>
